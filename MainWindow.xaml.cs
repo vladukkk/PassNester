@@ -20,7 +20,17 @@ namespace PassNester
         public MainWindow()
         {
             InitializeComponent();
-            DataContext = new MainViewModel();
+            var vm = new MainViewModel();
+            vm.RequestAddCollectionDialog = ShowAddCollectionDialog;
+            DataContext = vm;
+        }
+
+        private (string? name, string? color)? ShowAddCollectionDialog()
+        {
+            var dlg = new AddCollectionWindow { Owner = this };
+            if (dlg.ShowDialog() == true)
+                return (dlg.CollectionName, dlg.CollectionColor);
+            return null;
         }
     }
 }
