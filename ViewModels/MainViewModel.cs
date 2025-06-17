@@ -1,12 +1,7 @@
 ﻿using PassNester.Commands;
 using PassNester.Models;
 using PassNester.Services;
-using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Input;
 
 namespace PassNester.ViewModels;
@@ -17,6 +12,7 @@ public class MainViewModel
     public PasswordCollectionViewModel? SelectedCollection { get; set; }
 
     public ICommand AddNewCollectionCommand { get; }
+    public ICommand DeleteCollectionCommand { get; }
     public Func<(string? name, string? color)?>? RequestAddCollectionDialog { get; set; }
 
     public MainViewModel()
@@ -30,6 +26,18 @@ public class MainViewModel
         SelectedCollection = PasswordCollections.FirstOrDefault();
 
         AddNewCollectionCommand = new RelayCommand(_ => AddCollection());
+        DeleteCollectionCommand = new RelayCommand(_ => DeleteCollection(), _ => SelectedCollection != null);
+    }
+
+    private void DeleteCollection()
+    {
+        if (SelectedCollection == null)
+        {
+            return;
+        }
+        PasswordCollections.Remove(SelectedCollection);
+        SelectedCollection = PasswordCollections.FirstOrDefault();
+        //PasswordStorageService.Save(PasswordCollections.Select(vm => vm.Model).ToList());
     }
 
     private void AddCollection()

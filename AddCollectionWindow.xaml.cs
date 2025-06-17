@@ -20,11 +20,12 @@ namespace PassNester
     public partial class AddCollectionWindow : Window
     {
         public string CollectionName => NameBox.Text.Trim();
-        public string CollectionColor => ColorBox.Text.Trim();
+        public string CollectionColor {get; set; } = "#00D6FF";
 
         public AddCollectionWindow()
         {
             InitializeComponent();
+            ColorPicker.SelectedColor = (Color)ColorConverter.ConvertFromString(CollectionColor);
         }
 
         private void Ok_Click(object sender, RoutedEventArgs e)
@@ -35,6 +36,15 @@ namespace PassNester
                 return;
             }
             DialogResult = true;
+        }
+
+        private void ColorPicker_SelectedColorChanged(object sender, RoutedPropertyChangedEventArgs<Color?> e)
+        {
+            if (e.NewValue.HasValue)
+            {
+                var color = e.NewValue.Value;
+                CollectionColor = $"#{color.R:X2}{color.G:X2}{color.B:X2}";
+            }
         }
     }
 }
