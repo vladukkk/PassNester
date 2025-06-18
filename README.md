@@ -66,7 +66,8 @@
 ## Скриншоти
 
 ![image](https://github.com/user-attachments/assets/08392171-149b-48cd-bdad-b6f16468b798)
-
+![image](https://github.com/user-attachments/assets/82835efc-d788-42a6-b6a6-d9f63a6815af)
+![image](https://github.com/user-attachments/assets/eee6981e-e74c-4d65-81db-a50bf68108e1)
 
 ## Автор
 
