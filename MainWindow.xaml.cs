@@ -22,7 +22,16 @@ namespace PassNester
             InitializeComponent();
             var vm = new MainViewModel();
             vm.RequestAddCollectionDialog = ShowAddCollectionDialog;
+            vm.RequestAddEntryDialog = ShowAddEntryDialog;
             DataContext = vm;
+        }
+
+        private (string? key, string? value)? ShowAddEntryDialog()
+        {
+            var dlg = new AddEntryWindow { Owner = this };
+            if (dlg.ShowDialog() == true)
+                return (dlg.Key, dlg.Value);
+            return null;
         }
 
         private (string? name, string? color)? ShowAddCollectionDialog()
