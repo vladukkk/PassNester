@@ -67,7 +67,7 @@
 
 ![image](https://github.com/user-attachments/assets/06159fb5-2819-442d-b34f-58edc5dd9b7d)
 ![image](https://github.com/user-attachments/assets/82835efc-d788-42a6-b6a6-d9f63a6815af)
-![image](https://github.com/user-attachments/assets/eee6981e-e74c-4d65-81db-a50bf68108e1)
+![image](https://github.com/user-attachments/assets/cb30e02a-f487-47f5-91a2-c2bb4f538637)
 
 ## Автор
 
