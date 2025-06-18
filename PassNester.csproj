@@ -5,7 +5,7 @@
     <TargetFramework>net8.0-windows</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-	<ApplicationIcon>Assets\icon.ico</ApplicationIcon>
+	<ApplicationIcon>Assets/password.ico</ApplicationIcon>
 	<UseWPF>true</UseWPF>
   </PropertyGroup>
 
@@ -14,6 +14,10 @@
     <None Remove="Assets\delete.png" />
     <None Remove="Assets\icon.ico" />
     <None Remove="Assets\icon.png" />
+    <None Remove="Assets\password %281%29.ico" />
+    <None Remove="Assets\password %281%29.png" />
+    <None Remove="Assets\password.ico" />
+    <None Remove="Assets\password.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -25,6 +29,10 @@
     <Resource Include="Assets\delete.png" />
     <Resource Include="Assets\icon.ico" />
     <Resource Include="Assets\icon.png" />
+    <Resource Include="Assets\password (1).ico" />
+    <Resource Include="Assets\password (1).png" />
+    <Resource Include="Assets\password.ico" />
+    <Resource Include="Assets\password.png" />
   </ItemGroup>
 
 </Project>

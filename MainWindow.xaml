@@ -204,7 +204,7 @@
             <Border Background="#262626" CornerRadius="0,0,8,8" Margin="0,0,0,0" Height="60" VerticalAlignment="Top">
                 <Grid>
                     <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
-                        <Image x:Name="Icon" Source="/Assets/icon.png" Width="30" Height="30" Margin="16,0,16,0"/>
+                        <Image x:Name="Icon" Source="/Assets/password.ico" Width="30" Height="30" Margin="16,0,16,0"/>
                         <TextBlock Text="PassNester" Foreground="#979797" FontSize="24" FontWeight="SemiBold" VerticalAlignment="Center"/>
                     </StackPanel>
 
