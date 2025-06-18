@@ -65,19 +65,12 @@
 
 ## Скриншоти
 
-![Головне вікно](Assets/screenshot_main.png)
+![Головне вікно](![image](https://github.com/user-attachments/assets/de3e7fcf-e537-4b50-858a-244c9479ad26))
 
----
-
-## Ліцензія
-
-MIT License
-
----
 
 ## Автор
 
-- [Ваше ім'я або GitHub профіль]
+- [Vladuslav Antonyak]
 
 ---
 
