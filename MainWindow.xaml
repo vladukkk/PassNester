@@ -1,10 +1,14 @@
-﻿<Window x:Class="PassNester.MainWindow"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="PassNester" Height="650" Width="1100"
-        xmlns:vm="clr-namespace:PassNester.ViewModels"
-        Background="#1A1A1A" 
->
+﻿<Window
+    x:Class="PassNester.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="PassNester"
+    WindowStyle="None"
+    AllowsTransparency="True"
+    Background="#222"
+    ResizeMode="CanResize"
+    Height="600" Width="900"
+    >
 
     <Window.Resources>
         <!-- Стилі для ScrollBar -->
@@ -202,12 +206,25 @@
         <Grid Margin="0,0,0,0">
             <!-- Header -->
             <Border Background="#262626" CornerRadius="0,0,8,8" Margin="0,0,0,0" Height="60" VerticalAlignment="Top">
-                <Grid>
-                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
-                        <Image x:Name="Icon" Source="/Assets/password.ico" Width="30" Height="30" Margin="16,0,16,0"/>
-                        <TextBlock Text="PassNester" Foreground="#979797" FontSize="24" FontWeight="SemiBold" VerticalAlignment="Center"/>
+                <Grid Height="36" Background="#1A1A1A" VerticalAlignment="Top" MouseLeftButtonDown="TitleBar_MouseLeftButtonDown">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <!-- Іконка -->
+                    <Image Source="/Assets/password.ico" Width="24" Height="24" VerticalAlignment="Center" Margin="8,0,0,0" Grid.Column="0"/>
+                    <!-- Текст -->
+                    <TextBlock Text="PassNester" Foreground="White" FontWeight="Bold" VerticalAlignment="Center" Margin="8,0,0,0" Grid.Column="1"/>
+                    <!-- Пустий простір для вирівнювання -->
+                    <Grid Grid.Column="2"/>
+                    <!-- Кнопки керування -->
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,8,0" Grid.Column="3">
+                        <Button Width="32" Height="28" Content="—" Click="Minimize_Click" Background="Transparent" Foreground="White" BorderThickness="0" FontSize="16" />
+                        <Button Width="32" Height="28" Content="⛶" Click="Maximize_Click" Background="Transparent" Foreground="White" BorderThickness="0" FontSize="14" />
+                        <Button Width="32" Height="28" Content="✕" Click="Close_Click" Background="Transparent" Foreground="Red" BorderThickness="0" FontSize="16" />
                     </StackPanel>
-
                 </Grid>
             </Border>
 
@@ -300,7 +317,7 @@
                                 <TextBlock Text="{Binding SelectedCollection.Name}" Foreground="White" FontSize="20" FontWeight="SemiBold" Margin="8,0,0,0"/>
                             </StackPanel>
 
-                            <Button Grid.Column="1" Width="28" Height="28" Style="{StaticResource AddButtonStyle}"
+                            <Button Grid.Column="1" Width="28" Height="28" Margin="0,0,10,0" Style="{StaticResource AddButtonStyle}"
                                     Command="{Binding AddEntryToCollectionCommand}">
                                 <Image Source="/Assets/add.png" Width="16" Height="16" VerticalAlignment="Center" HorizontalAlignment="Center"/>
                             </Button>
