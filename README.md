@@ -65,7 +65,7 @@
 
 ## Скриншоти
 
-![Головне вікно](![image](https://github.com/user-attachments/assets/de3e7fcf-e537-4b50-858a-244c9479ad26))
+![image](https://github.com/user-attachments/assets/08392171-149b-48cd-bdad-b6f16468b798)
 
 
 ## Автор
